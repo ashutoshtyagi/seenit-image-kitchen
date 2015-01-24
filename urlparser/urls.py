@@ -4,5 +4,5 @@ from urlparser import views
 
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
-    url(r'^submit$', views.submit, name='submit'),
+    url(r'^showImages$', views.showImages, name='showImages'),
 )
