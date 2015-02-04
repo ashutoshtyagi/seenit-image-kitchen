@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load cropping thumbnail %}
+{% block content %}
+  <form method="post" id="cropping_form" action="." enctype="multipart/form-data">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Save"/>
+  </form>
+  {% if image %}
+    <br/>
+    <h4>Preview</h4>
+      <h5>using cropped_thumbnail tag - ratio crop</h5>
+      <img src="{% cropped_thumbnail image 'cropping' %}" />
+  {% endif %}
+{% endblock %}

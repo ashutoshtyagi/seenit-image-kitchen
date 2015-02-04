@@ -1,9 +1,17 @@
-<!doctype html>
+{% load cropping %}
+<!DOCTYPE html>
 <html>
-<head>
-	<title>
-		{{ title }}
-	</title>
-</head>
-<body>
-	
+  <head>
+    <title>Image cropping example {% block title %}{% endblock %}</title>
+    <style type="text/css">
+      th {text-align: left;}
+      #navigation li {
+        display: inline;
+        list-style-type: none;
+        padding-right: 10px;
+      }
+    </style>
+    {% block extra_head %}
+    {% endblock %}
+  </head>
+</html>

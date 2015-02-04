@@ -1,0 +1,12 @@
+{% include 'urlparser/head.html' %}
+
+<form method="POST" action="{% url 'urlparser:images' %}">
+    {% csrf_token %}
+{% for src in srcs %}
+    <img src="{{ src }}"/>
+    <input type="checkbox" name="checks[]" value="{{ src }}"/>
+{% endfor %}
+	<input type="submit" value="fetch" />
+</form>
+
+{% include 'urlparser/foot.html' %}

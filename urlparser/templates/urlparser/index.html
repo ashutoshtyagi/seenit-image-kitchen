@@ -1,6 +1,6 @@
 {% include 'urlparser/head.html' %}
 
-<form method="POST" action="{% url 'urlparser:showImages' %}">
+<form method="POST" action="{% url 'urlparser:submit' %}">
 	{% csrf_token %}
 	{{form}}
 	<input type="submit" value="fetch" />
